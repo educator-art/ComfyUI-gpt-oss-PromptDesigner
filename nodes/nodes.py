@@ -43,12 +43,10 @@ class LoadGPTOSSPromptDesigner:
                     {"multiline": True, "default": system_prompt},
                 ),
             },
-            "required": {
-                "user": (
-                    "STRING",
-                    {"multiline": True, "default": user_prompt},
-                ),
-            }
+            "user": (
+                "STRING",
+                {"multiline": True, "default": user_prompt},
+            ),
         }
 
     # After Inference, Default output: "Stable Diffusion Prompt"
