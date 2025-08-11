@@ -9,12 +9,9 @@ openai 1.99.1 (Checked: 2025.08.11)
 """
 from openai import OpenAI
 
-system_prompt="""
-You are Stable Diffusion Prompt Designer.
-"""
+system_prompt="""You are Stable Diffusion Prompt Designer."""
 
-user_prompt="""
-# 依頼
+user_prompt="""# 依頼
 以下の条件に従ってプロンプトを英語で作成してください
 
 ## プロンプトのテーマ
@@ -24,8 +21,7 @@ user_prompt="""
 30単語程度
 
 ## Output
-prompt: 
-"""
+prompt: """
 
 class LoadGPTOSSPromptDesigner:
 
