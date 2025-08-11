@@ -21,7 +21,7 @@ user_prompt="""# 依頼
 30単語程度
 
 ## Output
-prompt: """
+"""
 
 class LoadGPTOSSPromptDesigner:
 
@@ -60,8 +60,8 @@ class LoadGPTOSSPromptDesigner:
         if not user:
             raise ValueError(f"user promptが空です")
         
-        self.system_prompt=system_prompt
-        self.user_prompt=user_prompt
+        self.system_prompt=system
+        self.user_prompt=user
 
 
         client = OpenAI(
