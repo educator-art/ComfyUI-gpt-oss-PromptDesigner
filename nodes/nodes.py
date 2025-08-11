@@ -36,7 +36,7 @@ class LoadGPTOSSPromptDesigner:
             "required": {
                 "system": (
                     "STRING",
-                    {"multiline": True, "default": system_prompt},
+                    {"multiline": False, "default": system_prompt},
                 ),
                 "user": (
                     "STRING",
@@ -49,7 +49,7 @@ class LoadGPTOSSPromptDesigner:
     RETURN_TYPES = ("STRING",)
     FUNCTION = "inference"
     OUTPUT_NODE = True
-    CATEGORY = "Load Images and Prompts from Directory"
+    CATEGORY = "Load gpt-oss Prompt Designer"
 
     def inference(self, system, user):
 
@@ -62,7 +62,6 @@ class LoadGPTOSSPromptDesigner:
         
         self.system_prompt=system
         self.user_prompt=user
-
 
         client = OpenAI(
             base_url="http://localhost:11434/v1", # Local Ollama API
